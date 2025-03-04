@@ -1,0 +1,137 @@
+/* Cambiar el color de fondo y las letras */
+body {
+    background-color: black; /* Fondo negro */
+    color: white; /* Letras blancas */
+}
+
+/* El resto del código para mantener el diseño */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 30px;
+    position: relative;
+}
+
+.logo {
+    margin-left: -20px;  /* Mueve el logo a la izquierda */
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    margin: 0;
+    color: rgb(21, 223, 223); /* Título en blanco */
+}
+
+nav {
+    position: absolute;
+    left: 950px; /* Ajuste de este valor es opcional */
+}
+
+/* Nuevo código para menú horizontal */
+nav ul {
+    display: flex; /* Esto hace que los elementos estén en fila */
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 7px; /* Reducimos el espaciado entre los elementos */
+}
+
+nav ul li a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: rgb(0, 0, 0); /* Enlaces en blanco */
+    font-size: 12px;
+    padding: 8px 15px;
+    background-color: #00BFFF; /* Fondo color celeste */
+    border-radius: 15px;
+    transition: background-color 0.3s ease; /* Efecto de transición en el hover */
+}
+
+/* Cambio de color al pasar el mouse sobre el enlace */
+nav ul li a:hover {
+    background-color: #1E90FF; /* Color celeste más oscuro al pasar el ratón */
+}
+
+/* Estilo para las imágenes en la galería */
+.gallery {
+    display: flex; /* Alineamos las imágenes horizontalmente */
+    gap: 60px; /* Espacio entre las imágenes */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    margin-top: 20px; /* Espacio hacia arriba */
+}
+
+.gallery img {
+    height: 480px; /* Ajustamos la altura de las imágenes */
+    width: 380px; /* Fija el ancho para hacerlas más largas hacia abajo */
+    object-fit: cover; /* Asegura que la imagen se ajuste correctamente sin distorsionarse */
+    border-radius: 20px; /* Bordes redondeados si lo deseas */
+}
+
+/* Estilo para las imágenes dentro de la sección ACCESORIOS */
+.accesorios .grid {
+    display: flex; /* Alineamos las imágenes horizontalmente */
+    gap: 30px; /* Espacio entre las imágenes */
+    justify-content: flex-start; /* Alinea las imágenes al inicio */
+    width: max-content; /* El contenedor se ajusta al contenido de las imágenes */
+    overflow: hidden; /* Esconde el contenido fuera del contenedor */
+    animation: slide 25s linear infinite; /* Desliza las imágenes de manera infinita */
+}
+
+/* Animación para mover las imágenes de izquierda a derecha */
+@keyframes slide {
+    6% {
+        transform: translateX(0); /* Empieza desde la posición original */
+    }
+    95% {
+        transform: translateX(-100%); /* Mueve todo el contenido hacia la izquierda */
+    }
+    100% {
+        transform: translateX(0); /* Pausa en la última imagen por 4 segundos */
+    }
+}
+
+.accesorios img {
+    height: 250px; /* Ajustamos la altura de las imágenes */
+    width: 250px; /* Ajustamos el ancho de las imágenes para que todas quepan */
+    object-fit: cover; /* Asegura que la imagen se ajuste correctamente sin distorsionarse */
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+/* Aseguramos que el contenedor tenga el tamaño adecuado para todas las imágenes */
+.accesorios .grid {
+    width: max-content; /* El ancho total del contenedor se ajustará a todas las imágenes */
+}
+
+/* Contenedor que permite el scroll horizontal */
+.slider-container {
+    width: 100%;               /* Ocupa todo el ancho disponible */
+    overflow-x: auto;          /* Scroll horizontal automático */
+    overflow-y: hidden;        /* Oculta cualquier scroll vertical */
+    scrollbar-width: none;     /* Oculta la barra en Firefox */
+    -ms-overflow-style: none;  /* Oculta la barra en IE/Edge */
+    scroll-behavior: smooth;   /* Desplazamiento suave */
+    position: relative;        /* Para posicionar elementos si hicieras flechas, etc. */
+}
+
+/* Oculta la barra de scroll en navegadores WebKit (Chrome, Safari, etc.) */
+.slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Añadir esta clase para desactivar la animación cuando se hace click */
+.accesorios .grid.no-animation {
+    animation: none; /* Desactiva la animación */
+}
