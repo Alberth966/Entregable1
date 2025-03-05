@@ -1,10 +1,10 @@
-/* Cambiar el color de fondo y las letras */
+ 
 body {
-    background-color: black; /* Fondo negro */
-    color: white; /* Letras blancas */
+    background-color: black;  
+    color: white; 
 }
 
-/* El resto del código para mantener el diseño */
+
 header {
     display: flex;
     align-items: center;
@@ -14,7 +14,7 @@ header {
 }
 
 .logo {
-    margin-left: -20px;  /* Mueve el logo a la izquierda */
+    margin-left: -20px;   
 }
 
 .logo img {
@@ -30,108 +30,108 @@ h1 {
     transform: translateX(-50%);
     font-size: 24px;
     margin: 0;
-    color: rgb(21, 223, 223); /* Título en blanco */
+    color: rgb(21, 223, 223); 
 }
 
 nav {
     position: absolute;
-    left: 950px; /* Ajuste de este valor es opcional */
+    left: 950px;  
 }
 
-/* Nuevo código para menú horizontal */
+ 
 nav ul {
-    display: flex; /* Esto hace que los elementos estén en fila */
-    list-style: none; /* Elimina los puntos de la lista */
+    display: flex;  
+    list-style: none;  
     padding: 0;
     margin: 0;
 }
 
 nav ul li {
-    margin-right: 7px; /* Reducimos el espaciado entre los elementos */
+    margin-right: 7px;  
 }
 
 nav ul li a {
-    text-decoration: none; /* Elimina el subrayado */
-    color: rgb(0, 0, 0); /* Enlaces en blanco */
+    text-decoration: none;  
+    color: rgb(0, 0, 0);  
     font-size: 12px;
     padding: 8px 15px;
-    background-color: #00BFFF; /* Fondo color celeste */
+    background-color: #00BFFF;  
     border-radius: 15px;
-    transition: background-color 0.3s ease; /* Efecto de transición en el hover */
+    transition: background-color 0.3s ease;  
 }
 
-/* Cambio de color al pasar el mouse sobre el enlace */
+ 
 nav ul li a:hover {
-    background-color: #1E90FF; /* Color celeste más oscuro al pasar el ratón */
+    background-color: #1E90FF;  
 }
 
-/* Estilo para las imágenes en la galería */
+ 
 .gallery {
-    display: flex; /* Alineamos las imágenes horizontalmente */
-    gap: 60px; /* Espacio entre las imágenes */
-    justify-content: center; /* Centra las imágenes horizontalmente */
-    margin-top: 20px; /* Espacio hacia arriba */
+    display: flex;  
+    gap: 60px;  
+    justify-content: center;  
+    margin-top: 20px;  
 }
 
 .gallery img {
-    height: 480px; /* Ajustamos la altura de las imágenes */
-    width: 380px; /* Fija el ancho para hacerlas más largas hacia abajo */
-    object-fit: cover; /* Asegura que la imagen se ajuste correctamente sin distorsionarse */
-    border-radius: 20px; /* Bordes redondeados si lo deseas */
+    height: 480px;  
+    width: 380px;  
+    object-fit: cover;  
+    border-radius: 20px;  
 }
 
-/* Estilo para las imágenes dentro de la sección ACCESORIOS */
+ 
 .accesorios .grid {
-    display: flex; /* Alineamos las imágenes horizontalmente */
-    gap: 30px; /* Espacio entre las imágenes */
-    justify-content: flex-start; /* Alinea las imágenes al inicio */
-    width: max-content; /* El contenedor se ajusta al contenido de las imágenes */
-    overflow: hidden; /* Esconde el contenido fuera del contenedor */
-    animation: slide 25s linear infinite; /* Desliza las imágenes de manera infinita */
+    display: flex;  
+    gap: 30px;  
+    justify-content: flex-start;  
+    width: max-content;  
+    overflow: hidden; 
+    animation: slide 25s linear infinite; 
 }
 
-/* Animación para mover las imágenes de izquierda a derecha */
+
 @keyframes slide {
     6% {
-        transform: translateX(0); /* Empieza desde la posición original */
+        transform: translateX(0);
     }
     95% {
-        transform: translateX(-100%); /* Mueve todo el contenido hacia la izquierda */
+        transform: translateX(-100%); 
     }
     100% {
-        transform: translateX(0); /* Pausa en la última imagen por 4 segundos */
+        transform: translateX(0); 
     }
 }
 
 .accesorios img {
-    height: 250px; /* Ajustamos la altura de las imágenes */
-    width: 250px; /* Ajustamos el ancho de las imágenes para que todas quepan */
-    object-fit: cover; /* Asegura que la imagen se ajuste correctamente sin distorsionarse */
-    border-radius: 15px; /* Bordes redondeados */
+    height: 250px; 
+    width: 250px; 
+    object-fit: cover;
+    border-radius: 15px; 
 }
 
-/* Aseguramos que el contenedor tenga el tamaño adecuado para todas las imágenes */
+
 .accesorios .grid {
-    width: max-content; /* El ancho total del contenedor se ajustará a todas las imágenes */
+    width: max-content; 
 }
 
-/* Contenedor que permite el scroll horizontal */
+
 .slider-container {
-    width: 100%;               /* Ocupa todo el ancho disponible */
-    overflow-x: auto;          /* Scroll horizontal automático */
-    overflow-y: hidden;        /* Oculta cualquier scroll vertical */
-    scrollbar-width: none;     /* Oculta la barra en Firefox */
-    -ms-overflow-style: none;  /* Oculta la barra en IE/Edge */
-    scroll-behavior: smooth;   /* Desplazamiento suave */
-    position: relative;        /* Para posicionar elementos si hicieras flechas, etc. */
+    width: 100%;              
+    overflow-x: auto;          
+    overflow-y: hidden;        
+    scrollbar-width: none;     
+    -ms-overflow-style: none; 
+    scroll-behavior: smooth;  
+    position: relative;        
 }
 
-/* Oculta la barra de scroll en navegadores WebKit (Chrome, Safari, etc.) */
+
 .slider-container::-webkit-scrollbar {
     display: none;
 }
 
-/* Añadir esta clase para desactivar la animación cuando se hace click */
+
 .accesorios .grid.no-animation {
-    animation: none; /* Desactiva la animación */
+    animation: none; 
 }
