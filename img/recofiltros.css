@@ -1,0 +1,39 @@
+.product-item {
+    display: inline-block;
+    width: 22%; /* Asegúrate de que las imágenes no ocupen toda la pantalla */
+    margin: 10px;
+    text-align: center; /* Centra los contenidos dentro de la caja */
+}
+
+.product-image {
+    width: 100%; /* Las imágenes ocuparán todo el ancho de la caja pero mantendrán su proporción */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Puedes agregar bordes redondeados si lo deseas */
+}
+
+.product-info {
+    margin-top: 10px;
+}
+
+.product-item h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.product-item p {
+    font-size: 14px;
+    color: #555;
+}
+
+.add-to-cart {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
