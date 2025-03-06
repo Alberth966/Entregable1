@@ -1,15 +1,10 @@
 .product-item {
     display: inline-block;
-    width: 22%; /* Asegúrate de que las imágenes no ocupen toda la pantalla */
-    margin: 10px;
-    text-align: center; /* Centra los contenidos dentro de la caja */
-}
+    width: 22%;       margin: 10px;
+    text-align: center;   }
 
 .product-image {
-    width: 100%; /* Las imágenes ocuparán todo el ancho de la caja pero mantendrán su proporción */
-    height: auto; /* Mantiene la proporción de la imagen */
-    border-radius: 10px; /* Puedes agregar bordes redondeados si lo deseas */
-}
+    width: 100%;       height: auto;       border-radius: 10px;   }
 
 .product-info {
     margin-top: 10px;

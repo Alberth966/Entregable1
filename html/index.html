@@ -1,0 +1,59 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remanfast</title>
+    <link rel="stylesheet" href="{{ url_for('css', filename='estilos.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('img', filename='logo.JPG') }}" alt="Logo Remanfast">
+        </div>
+        <h1>REMANFAST</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('accesorios') }}">ACCESORIOS</a></li>
+                <li><a href="#">MARCA</a></li>
+                <li><a href="#">RESEÑAS</a></li>
+                <li><a href="#">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gallery">
+        <img src="{{ url_for('img', filename='reparacion.jpg') }}" alt="Reparación Lavadora">
+        <img src="{{ url_for('img', filename='mantenimiento.jpg') }}" alt="Mantenimiento Lavadora">
+        <img src="{{ url_for('img', filename='diagnostico.jpg') }}" alt="Diagnóstico lavadora">
+    </section>
+
+    <section class="accesorios">
+        <h2>ACCESORIOS</h2>
+        <div class="slider-container">
+            <div class="grid">
+                <a href="{{ url_for('accesorios') }}"><img src="{{ url_for('img', filename='accesorios/accesorio6.jpg') }}" alt="Accesorio 1"></a>
+                <a href="{{ url_for('accesorios') }}"><img src="{{ url_for('img', filename='accesorios/accesorio5.jpg') }}" alt="Accesorio 2"></a>
+                <a href="{{ url_for('accesorios') }}"><img src="{{ url_for('img', filename='accesorios/accesorio7.jpg') }}" alt="Accesorio 3"></a>
+                <a href="{{ url_for('accesorios') }}"><img src="{{ url_for('img', filename='accesorios/accesorio3.webp') }}" alt="Accesorio 4"></a>
+                <a href="{{ url_for('accesorios') }}"><img src="{{ url_for('img', filename='accesorios/accesorio99.png') }}" alt="Accesorio 5"></a>
+                <a href="{{ url_for('accesorios') }}"><img src="{{ url_for('img', filename='accesorios/accesorio1.jpg') }}" alt="Accesorio 6"></a>
+                <a href="{{ url_for('accesorios') }}"><img src="{{ url_for('img', filename='accesorios/accesorio4.jpg') }}" alt="Accesorio 7"></a>
+                <a href="{{ url_for('accesorios') }}"><img src="{{ url_for('img', filename='accesorios/accesorio2.webp') }}" alt="Accesorio 8"></a>
+                <a href="{{ url_for('accesorios') }}"><img src="{{ url_for('img', filename='accesorios/accesorio8.jpg') }}" alt="Accesorio 9"></a>
+                <a href="{{ url_for('accesorios') }}"><img src="{{ url_for('img', filename='accesorios/accesorio5.jpg') }}" alt="Accesorio 10"></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <p>Atención Personalizada y Garantía en Todos los Servicios</p>
+        <p>¿No sabes qué le pasa a tu lavadora? Envíanos una foto o descripción del problema y te daremos la mejor solución.</p>
+        <button class="whatsapp">WhatsApp</button>
+    </section>
+
+    <footer>
+        <p>Servicio a domicilio disponible en todo HUÁNUCO.</p>
+    </footer>
+    <script src="{{ url_for('js', filename='script.js') }}"></script>
+</body>
+</html>

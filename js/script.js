@@ -1,16 +1,19 @@
-// Función para alternar entre las imágenes de cada sección
 function toggleImages(className) {
     let images = document.querySelectorAll(className);
     let index = 0;
-    
+
+    if (images.length === 0) {
+        console.warn("No se encontraron imágenes con la clase: " + className);
+        return;
+    }
+
     setInterval(() => {
         images.forEach(img => img.classList.remove("active"));
         images[index].classList.add("active");
         index = (index + 1) % images.length;
-    }, 3000); // Cambia la imagen cada 3 segundos
+    }, 3000); 
 }
 
-// Llamar la función para cada categoría
 document.addEventListener("DOMContentLoaded", () => {
     toggleImages(".filtro-img");
     toggleImages(".ruedas-img");

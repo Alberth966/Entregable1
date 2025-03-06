@@ -1,0 +1,107 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remanfast</title>
+    <link rel="stylesheet" href="{{ url_for('css', filename='estilos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('css', filename='marcas.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('img', filename='logo.JPG') }}" alt="Logo Remanfast">
+        </div>
+        <h1>REMANFAST</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('accesorios') }}">ACCESORIOS</a></li>
+                <li><a href="#">MARCA</a></li>
+                <li><a href="#">RESEÑAS</a></li>
+                <li><a href="#">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="brands">
+        <a href="https://www.electrolux.com" class="brand-link">
+            <img src="{{ url_for('img', filename='MARCAS/electrolux1.png') }}" alt="Electrolux">
+        </a>
+        <a href="https://www.daewoo.com" class="brand-link">
+            <img src="{{ url_for('img', filename='MARCAS/daewoo1.png') }}" alt="Daewoo">
+        </a>
+        <a href="https://www.lg.com" class="brand-link">
+            <img src="{{ url_for('img', filename='MARCAS/lg1.jpg') }}" alt="LG">
+        </a>
+        <a href="https://www.mabe.com" class="brand-link">
+            <img src="{{ url_for('img', filename='MARCAS/mabe1.png') }}" alt="Mabe">
+        </a>
+        <a href="https://www.samsung.com" class="brand-link">
+            <img src="{{ url_for('img', filename='MARCAS/samsung1.png') }}" alt="Samsung">
+        </a>
+        <a href="https://www.indurama.com" class="brand-link">
+            <img src="{{ url_for('img', filename='MARCAS/indurama1.png') }}" alt="Indurama">
+        </a>
+        <a href="https://www.whirlpool.com" class="brand-link">
+            <img src="{{ url_for('img', filename='MARCAS/w3.png') }}" alt="Whirlpool">
+        </a>
+    </section>
+
+    <section class="products">
+        <h2 class="subtitle">Dale un plus a tu lavadora</h2>
+
+        <div class="product-row">
+            <div class="product-description">
+                <h3>Filtros</h3>
+            </div>
+            <div class="product-image">
+                <a href="{{ url_for('producto', imagen='accesorio10.jpg') }}">
+                    <img src="{{ url_for('img', filename='accesorios/accesorio10.jpg') }}" alt="Filtro 1" class="filtro-img">
+                    <img src="{{ url_for('img', filename='accesorios/accesorio11.jpg') }}" alt="Filtro 2" class="filtro-img">
+                    <img src="{{ url_for('img', filename='accesorios/accesorio99.png') }}" alt="Filtro 3" class="filtro-img">
+                </a>
+            </div>
+        </div>
+
+        <div class="product-row">
+            <div class="product-description">
+                <h3>Ruedas</h3>
+            </div>
+            <div class="product-image">
+                <a href="{{ url_for('recorueda') }}">
+                    <img src="{{ url_for('img', filename='accesorios/rueda1.jpg') }}" alt="Ruedas 1" class="ruedas-img">
+                    <img src="{{ url_for('img', filename='accesorios/rueda2.jpg') }}" alt="Ruedas 2" class="ruedas-img">
+                    <img src="{{ url_for('img', filename='accesorios/rueda3.png') }}" alt="Ruedas 3" class="ruedas-img">
+                </a>
+            </div>
+        </div>
+
+        <div class="product-row">
+            <div class="product-description">
+                <h3>Fundas</h3>
+            </div>
+            <div class="product-image">
+                <a href="{{ url_for('recofundas') }}">
+                    <img src="{{ url_for('img', filename='accesorios/accesorio6.jpg') }}" alt="Fundas 1" class="fundas-img">
+                    <img src="{{ url_for('img', filename='accesorios/accesorio5.jpg') }}" alt="Fundas 2" class="fundas-img">
+                    <img src="{{ url_for('img', filename='accesorios/accesorio7.jpg') }}" alt="Fundas 3" class="fundas-img">
+                </a>
+            </div>
+        </div>
+
+        <div class="product-row">
+            <div class="product-description">
+                <h3>Mangueras</h3>
+            </div>
+            <div class="product-image">
+                <a href="{{ url_for('recomangueras') }}">
+                    <img src="{{ url_for('img', filename='accesorios/accesorio8.jpg') }}" alt="Mangueras 1" class="mangueras-img">
+                    <img src="{{ url_for('img', filename='accesorios/accesorio2.webp') }}" alt="Mangueras 2" class="mangueras-img">
+                    <img src="{{ url_for('img', filename='accesorios/rueda5.jpg') }}" alt="Mangueras 3" class="mangueras-img">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('js', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<html lang="es"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Remanfast</title>
+        <link rel="stylesheet" href="{{ url_for('css', filename='estilos.css') }}">
+        <link rel="stylesheet" href="{{ url_for('css', filename='marcas.css') }}">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="{{ url_for('img', filename='logo.JPG') }}" alt="Logo Remanfast">
+            </div>
+            <h1>REMANFAST</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('accesorios') }}">ACCESORIOS</a></li>
+                    <li><a href="#">MARCA</a></li>
+                    <li><a href="#">RESEÑAS</a></li>
+                    <li><a href="#">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="product-selected">
+            <h2>{{ producto['nombre'] }}</h2>
+            <div class="product-item">
+                <img src="{{ url_for('img', filename=producto['imagen']) }}" alt="{{ producto['nombre'] }}" class="product-image">
+                <div class="product-info">
+                    <h3>{{ producto['nombre'] }}</h3>
+                    <p>{{ producto['descripcion'] }}</p>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+            </div>
+        </section>
+    
+        <section class="recommended-products">
+            <h2>Más productos que te pueden interesar</h2>
+            <div class="product-row">
+                {% for producto in productos_recomendados %}
+                <div class="product-item">
+                    <img src="{{ url_for('img', filename=producto['imagen']) }}" alt="{{ producto['nombre'] }}" class="product-image">
+                    <div class="product-info">
+                        <h3>{{ producto['nombre'] }}</h3>
+                        <p>{{ producto['descripcion'] }}</p>
+                        <button class="add-to-cart">Añadir al carrito</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>    
+        <script src="{{ url_for('js', filename='script.js') }}"></script>
+    </body>
+</html>
